@@ -7,6 +7,8 @@ const Shelf = () => {
   const { state } = useContext(MyContext);
   let { productList, sizeFilter, orderFilter } = state;
 
+  productList = Object.values(productList);
+
   productList = sizeFilter.length
     ? productList.filter(product => {
         for (let availSize of product.availableSizes) {

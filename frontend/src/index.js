@@ -21,7 +21,7 @@ const App = () => {
         console.log(res);
         dispatch({
           type: "FETCH_PRODUCT",
-          payload: res.data.products // Check if it is an array
+          payload: res.data.products
         });
       });
     // Get cart product list from localstorage

@@ -1,10 +1,12 @@
 const reducer = (state, action) => {
   let id = null;
+  let newProductList = {};
   switch (action.type) {
     case "FETCH_PRODUCT":
+      action.payload.forEach(product => (newProductList[product.id] = product));
       return {
         ...state,
-        productList: action.payload
+        productList: newProductList
       };
     case "GET_CART_PRODUCT":
       return {
