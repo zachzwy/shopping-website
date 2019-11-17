@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import MyContext from "../context";
 
-const SizeFilter = () => {
+export default function SizeFilter() {
   const sizes = ["XS", "S", "M", "ML", "L", "XL", "XXL"];
   const { state, dispatch } = useContext(MyContext);
   const { sizeFilter } = state;
@@ -33,6 +33,4 @@ const SizeFilter = () => {
       </div>
     </div>
   );
-};
-
-export default SizeFilter;
+}

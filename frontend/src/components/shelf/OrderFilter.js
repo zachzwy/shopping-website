@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import MyContext from "../../context";
 
-const OrderFilter = ({ productsFound }) => {
+export default function OrderFilter({ numberOfProductsFound }) {
   const { dispatch } = useContext(MyContext);
 
   return (
     <div className="order-filter">
-      <span>{productsFound} Product(s) found.</span>
+      <span>{numberOfProductsFound} Product(s) found.</span>
       <span className="order-filter-select">
         Order by{" "}
         <select
@@ -24,6 +24,4 @@ const OrderFilter = ({ productsFound }) => {
       </span>
     </div>
   );
-};
-
-export default OrderFilter;
+}

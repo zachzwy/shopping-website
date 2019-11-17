@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import MyContext from "../../context";
 
-const Checkout = () => {
+export default function Checkout() {
   const { state } = useContext(MyContext);
   const { cartProductList } = state;
   const subtotal = Object.values(cartProductList).reduce(
@@ -17,6 +17,4 @@ const Checkout = () => {
       <div className="checkout-button">CHECKOUT</div>
     </div>
   );
-};
-
-export default Checkout;
+}

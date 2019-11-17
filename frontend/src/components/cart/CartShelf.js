@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import MyContext from "../../context";
 import CartProduct from "./CartProduct";
 
-const CartShelf = () => {
+export default function CartShelf() {
   const { state } = useContext(MyContext);
   const { cartProductList } = state;
 
@@ -19,6 +19,4 @@ const CartShelf = () => {
       )}
     </div>
   );
-};
-
-export default CartShelf;
+}

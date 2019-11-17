@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import MyContext from "../../context";
 
-const Product = ({ product }) => {
+export default function Product({ product }) {
   const { dispatch } = useContext(MyContext);
 
   return (
@@ -27,6 +27,4 @@ const Product = ({ product }) => {
       </div>
     </div>
   );
-};
-
-export default Product;
+}

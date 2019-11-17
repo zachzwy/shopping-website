@@ -1,21 +1,18 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import CartShelf from "./CartShelf";
 import Checkout from "./Checkout";
 
-const Cart = () => {
-  const [offset, setOffset] = useState(0);
+export default function Cart() {
+  const [isShown, setIsShown] = useState(0);
   return (
     <div
       className="cart"
       style={{
-        left: `calc(100vw - ${offset}px)`
+        left: `calc(100vw - ${isShown ? 500 : 0}px)`
       }}
     >
-      <div
-        className="cart-button"
-        onClick={() => setOffset(offset => 500 - offset)}
-      >
-        {offset ? "X" : "Cart"}
+      <div className="cart-button" onClick={() => setIsShown(!isShown)}>
+        {isShown ? "X" : "Cart"}
       </div>
       <div className="cart-container">
         <div className="cart-title">CART</div>
@@ -24,6 +21,4 @@ const Cart = () => {
       </div>
     </div>
   );
-};
-
-export default Cart;
+}

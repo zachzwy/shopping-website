@@ -3,7 +3,7 @@ import MyContext from "../../context";
 import Product from "./Product";
 import OrderFilter from "./OrderFilter";
 
-const Shelf = () => {
+export default function Shelf() {
   const { state } = useContext(MyContext);
   let { productList, sizeFilter, orderFilter } = state;
 
@@ -18,15 +18,14 @@ const Shelf = () => {
       })
     : productList;
 
-  if (orderFilter === "select") productList = productList;
-  else
+  if (orderFilter !== "select")
     productList.sort((a, b) =>
       orderFilter === "low-to-high" ? a.price - b.price : b.price - a.price
     );
 
   return (
     <div className="shelf">
-      <OrderFilter productsFound={productList.length} />
+      <OrderFilter numberOfProductsFound={productList.length} />
       <div className="product-list">
         {productList.map(product => (
           <Product key={product.id} product={product} />
@@ -34,6 +33,4 @@ const Shelf = () => {
       </div>
     </div>
   );
-};
-
-export default Shelf;
+}

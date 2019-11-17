@@ -12,13 +12,10 @@ const App = () => {
   const initState = useContext(MyContext);
   const [state, dispatch] = useReducer(reducer, initState);
 
-  console.log(state);
-
   useEffect(() => {
     axios
       .get("https://react-shopping-cart-67954.firebaseio.com/products.json")
       .then(res => {
-        console.log(res);
         dispatch({
           type: "FETCH_PRODUCT",
           payload: res.data.products
