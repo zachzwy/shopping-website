@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/shopping-website/static/css/main.948c902b.chunk.css",
+    "main.js": "/shopping-website/static/js/main.e6f8cb50.chunk.js",
+    "main.js.map": "/shopping-website/static/js/main.e6f8cb50.chunk.js.map",
+    "runtime~main.js": "/shopping-website/static/js/runtime~main.5cd8c2d8.js",
+    "runtime~main.js.map": "/shopping-website/static/js/runtime~main.5cd8c2d8.js.map",
+    "static/js/2.3fddde1c.chunk.js": "/shopping-website/static/js/2.3fddde1c.chunk.js",
+    "static/js/2.3fddde1c.chunk.js.map": "/shopping-website/static/js/2.3fddde1c.chunk.js.map",
+    "index.html": "/shopping-website/index.html",
+    "precache-manifest.ba6b416e7986e5f48c6b6910759852a4.js": "/shopping-website/precache-manifest.ba6b416e7986e5f48c6b6910759852a4.js",
+    "service-worker.js": "/shopping-website/service-worker.js",
+    "static/css/main.948c902b.chunk.css.map": "/shopping-website/static/css/main.948c902b.chunk.css.map",
+    "static/media/100_2.jpg": "/shopping-website/static/media/100_2.9b698d6d.jpg"
+  }
+}
